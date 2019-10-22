@@ -4,7 +4,7 @@
   <title id="Name"></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-p {
+p,button {
   text-align: center;
   font-size: 60px;
   margin-top: 0px;
@@ -24,7 +24,7 @@ p {
 <script>
 function CreateTimer() {
   var TimerName = prompt("What do you want to call the timer? (Can Be left Blank)", "");
-  var time = prompt("Please enter a time in the following format", "Oct 22, 2019 13:36:00");
+  var time = prompt("Please enter a time in the following format (Local Military Time)", "Oct 22, 2019 13:36:00");
   var Message = prompt("What do you want the timer to say when finished (Can Be left Blank)", "");
   if (time != null) {
   document.getElementById("button").innerHTML = "";
