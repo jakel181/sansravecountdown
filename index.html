@@ -28,9 +28,9 @@ function CreateTimer() {
   var Message = prompt("What do you want the timer to say when finished (Can Be left Blank)", "");
   if (time != null) {
   document.getElementById("button").innerHTML = "";
-  document.getElementById("Name").innerHTML = "TimerName";
+  document.getElementById("Name").innerHTML = TimerName;
 // Set the date we're counting down to
-var countDownDate = new Date(new Date(time) - 47000).getTime();
+var countDownDate = new Date(new Date(time) - 46000).getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
