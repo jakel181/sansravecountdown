@@ -23,9 +23,8 @@ p {
 
 <script>
 function CreateTimer() {
-  var now = new Date().getTime();
   var TimerName = prompt("What do you want to call the timer? (Can Be left Blank)", "");
-  var time = prompt("Please enter a time in the following format (Local Military Time)", now);
+  var time = prompt("Please enter a time in the following format (Local Military Time)", "Jan 19, 2038 03:13:25");
   var Message = prompt("What do you want the timer to say when finished (Can Be left Blank)", "");
   if (time != null) {
   document.getElementById("button").innerHTML = "";
@@ -37,7 +36,7 @@ var countDownDate = new Date(new Date(time) - 46000).getTime();
 var x = setInterval(function() {
 
   // Get today's date and time
- 
+  var now = new Date().getTime();
     
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
