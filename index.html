@@ -9,10 +9,6 @@ p {
   font-size: 60px;
   margin-top: 0px;
 }
-
-#Video {
-  display: none;
-}
 </style>
 </head>
 <body>
@@ -27,7 +23,7 @@ p {
   <br />*The time on the website may not match the clock on your computer since most likely they did not reference the same time sever at the same time.</span></center>
 
 <p id="Timer"></p>
-<div id="Video"><p><iframe id='frame1' width='560' height='315' display='none' src='https://www.youtube.com/embed/Pg5rnIA0K1Y' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></p></div>
+<p id="Video"></p>
 
 <script>
 function CreateTimer() {
@@ -67,8 +63,7 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("Video").style.display = "block";
-    document.getElementById("frame1").setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+    document.getElementById("Video").innerHTML = "<iframe width='560' height='315' src='https://www.youtube.com/embed/Pg5rnIA0K1Y?autoplay=1' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
   }
 }, 1000);
 
