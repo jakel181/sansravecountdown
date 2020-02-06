@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -9,6 +10,9 @@ p {
   font-size: 60px;
   margin-top: 0px;
 }
+#Video {	
+  display: none;
+}
 </style>
 </head>
 <body>
@@ -18,12 +22,12 @@ p {
 
 <center><span id=button><button onclick="CreateTimer()">Create a countdown</button> <br />
   A few notes:
-  <br />*This is not perfect, since I can not account for the time it takes for the video to load.
-  <br />*Make a timer at least 46 seconds ahead of the current time, since it is 46 seconds until the beat drops.
+  <br />*Thanks to Noisestorm, Toby Fox, Fluxxy, and Dat Boi DXY for the music and the video.
+  <br />*Make a timer at least 43 seconds ahead of the current time, since it is 43 seconds until the beat drops.
   <br />*The time on the website may not match the clock on your computer since most likely they did not reference the same time sever at the same time.</span></center>
 
 <p id="Timer"></p>
-<p id="Video"></p>
+<center><video id="Video" width='320' height='240' controls autoplay></video></center>
 
 <script>
 function CreateTimer() {
@@ -39,7 +43,7 @@ function CreateTimer() {
   document.getElementById("button").innerHTML = "";
   document.getElementById("Name").innerHTML = TimerName;
 // Set the date we're counting down to
-var countDownDate = new Date(new Date(time) - 46000).getTime();
+var countDownDate = new Date(new Date(time) - 43000).getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -54,7 +58,8 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("Video").innerHTML = "<iframe width='560' height='315' src='https://www.youtube.com/embed/Pg5rnIA0K1Y?autoplay=1' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+    document.getElementById("Video").style.display = "block";
+    document.getElementById("Video").innerHTML = "<source src='Crab Rave Undertale Style (1).mp4' type='video/mp4'>Your browser does not support the video tag. :(";
   }
 }, 1000);
 
@@ -92,3 +97,5 @@ var x2 = setInterval(function() {
 
 </body>
 </html>
+
+
