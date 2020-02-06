@@ -23,11 +23,11 @@ p {
 <center><span id=button><button onclick="CreateTimer()">Create a countdown</button> <br />
   A few notes:
   <br />*Thanks to Noisestorm, Toby Fox, Fluxxy, and Dat Boi DXY for the music and the video.
-  <br />*Make a timer at least 43 seconds ahead of the current time, since it is 43 seconds until the beat drops.
+  <br />*Make a timer at least 44 seconds ahead of the current time, since it is 44 seconds until the beat drops.
   <br />*The time on the website may not match the clock on your computer since most likely they did not reference the same time sever at the same time.</span></center>
 
 <p id="Timer"></p>
-<center><video id="Video" width='320' height='240' controls autoplay></video></center>
+<center><video id="Video" width='852' height='480' controls autoplay></video></center>
 
 <script>
 function CreateTimer() {
@@ -43,7 +43,7 @@ function CreateTimer() {
   document.getElementById("button").innerHTML = "";
   document.getElementById("Name").innerHTML = TimerName;
 // Set the date we're counting down to
-var countDownDate = new Date(new Date(time) - 43000).getTime();
+var countDownDate = new Date(new Date(time) - 43500).getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
