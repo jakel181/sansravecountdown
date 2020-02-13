@@ -61,16 +61,14 @@ function Sans() {
 
 function CreateTimer() {
   var radios = document.getElementsByName('num');
-
-for (var i = 0, length = radios.length; i < length; i++) {
-    if (radios[i].checked) {
-        // do whatever you want with the checked radio
-        var offset = (radios[i].value);
-
-        // only one radio can be logically checked, don't check the rest
-        break;
-    }
-}
+  for (var i = 0, length = radios.length; i < length; i++) {
+      if (radios[i].checked) {
+          // do whatever you want with the checked radio
+          var offset = (radios[i].value);
+          // only one radio can be logically checked, don't check the rest
+         break;
+      }
+  }
   var g = new Date();
   const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const hourNames = ["24", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"];
