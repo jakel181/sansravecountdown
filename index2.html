@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -21,44 +20,43 @@ p {
 
 
 <center><span id=button><button onclick="CreateTimer()">Create a countdown</button> <br />
-<p>Pick a video:</p>
+  <div>Choose a video:</div>
 
 <form>
-<input type="radio" name="num" class="vid1" id="<source src='Crab Rave Undertale Style (1).mp4' type='video/mp4'>Your browser does not support the video tag. :(" value="43600" onclick="Crab()" checked>Crab Rave<br>
-<input type="radio" name="num" class="vid2" id="<source src='SansRave.mp4' type='video/mp4'>Your browser does not support the video tag. :("value="75000" onclick="Sans()">Sans Rave<br>
+<input type="radio" name="num" id="vid1" class="<source src='Crab Rave Undertale Style (1).mp4' type='video/mp4'>Your browser does not support the video tag. :(" value="43600" onclick="Crab()" checked>Crab Rave<br>
+<input type="radio" name="num" id="vid2" class="<source src='SansRave.mp4' type='video/mp4'>Your browser does not support the video tag. :(" value="75000" onclick="Sans()">Sans Rave<br>
 </form>
 
   A few notes:
   <br />*Thanks to Monstercat, Noisestorm, Toby Fox, Fluxxy, and Dat Boi DXY for the music and the video.
-  <br />*Make a timer at least <span id="CR" style="inline-block">44</span><span id="SR" style="display:none">75</span> seconds ahead of the current time, since it is <span id="CR" style="inline-block">44</span><span id="SR" style="display:none">75</span> seconds until the beat drops.
+  <br />*Make a timer at least <span id="CR" style="display:inline-block">44</span><span id="SR" style="display:none">75</span> seconds ahead of the current time, since it is <span id="CR" style="display:inline-block">44</span><span id="SR" style="display:none">75</span> seconds until the beat drops.
   <br />*The time on the website may not match the clock on your computer since most likely they did not reference the same time sever at the same time.</span></center>
 
 <p id="Timer"></p>
 <center><video id="Video" width='852' height='480' controls autoplay></video></center>
-
 <script>
 function Crab() {
-  var checkBox = document.getElementByClassName("vid1");
+  var checkBox = document.getElementById("vid1");
   var text = document.getElementById("CR");
   if (checkBox.checked == true){
-    CR.style.display = "inline-block";
-    SR.style.display = "none";
+    text.style.display = "inline-block";
+    document.getElementById("SR").style.display = "none";
   } else {
-     CR.style.display = "none";
+     text.style.display = "none";
   }
 }
 
 function Sans() {
-  var checkBox = document.getElementByClassName("vid2");
+  var checkBox = document.getElementById("vid2");
   var text = document.getElementById("SR");
   if (checkBox.checked == true){
-    SR.style.display = "inline-block";
-    CR.style.display = "none";
+    text.style.display = "inline-block";
+    document.getElementById("CR").style.display = "none";
   } else {
-     SR.style.display = "none";
+     text.style.display = "none";
   }
 }
-
+  
 function CreateTimer() {
   var radios = document.getElementsByName('num');
   for (var i = 0, length = radios.length; i < length; i++) {
