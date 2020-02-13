@@ -24,8 +24,8 @@ p {
 <p>Pick a video:</p>
 
 <form>
-<input type="radio" name="num" id="vid1" value="43600" onclick="Crab()" checked>Crab Rave<br>
-<input type="radio" name="num" id="vid2" value="75000" onclick="Sans()">Sans Rave<br>
+<input type="radio" name="num" class="vid1" id="<source src='Crab Rave Undertale Style (1).mp4' type='video/mp4'>Your browser does not support the video tag. :(" value="43600" onclick="Crab()" checked>Crab Rave<br>
+<input type="radio" name="num" class="vid2" value="75000" onclick="Sans()">Sans Rave<br>
 </form>
 
   A few notes:
@@ -38,7 +38,7 @@ p {
 
 <script>
 function Crab() {
-  var checkBox = document.getElementById("vid1");
+  var checkBox = document.getElementByClassName("vid1");
   var text = document.getElementById("CR");
   if (checkBox.checked == true){
     CR.style.display = "inline-block";
@@ -49,7 +49,7 @@ function Crab() {
 }
 
 function Sans() {
-  var checkBox = document.getElementById("vid2");
+  var checkBox = document.getElementByClassName("vid2");
   var text = document.getElementById("SR");
   if (checkBox.checked == true){
     SR.style.display = "inline-block";
@@ -65,6 +65,14 @@ function CreateTimer() {
       if (radios[i].checked) {
           // do whatever you want with the checked radio
           var offset = (radios[i].value);
+          // only one radio can be logically checked, don't check the rest
+         break;
+      }
+  }
+  for (var i = 0, length = radios.length; i < length; i++) {
+      if (radios[i].checked) {
+          // do whatever you want with the checked radio
+          var url = (radios[i].id);
           // only one radio can be logically checked, don't check the rest
          break;
       }
@@ -97,7 +105,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("Video").style.display = "block";
-    document.getElementById("Video").innerHTML = "<source src='Crab Rave Undertale Style (1).mp4' type='video/mp4'>Your browser does not support the video tag. :(";
+    document.getElementById("Video").innerHTML = url;
   }
 }, 1000);
 
