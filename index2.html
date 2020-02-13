@@ -23,8 +23,8 @@ p {
   <div>Choose a video:</div>
 
 <form>
-<input type="radio" name="num" id="vid1" class="Crab" value="43600" onclick="Crab()" checked>Crab Rave<br>
-<input type="radio" name="num" id="vid2" class="Sans" value="75000" onclick="Sans()">Sans Rave<br>
+<input type="radio" name="num" id="Crab" value="43600" onclick="Crab()" checked>Crab Rave<br>
+<input type="radio" name="num" id="Sans" value="75000" onclick="Sans()">Sans Rave<br>
 </form>
 
   A few notes:
@@ -36,7 +36,7 @@ p {
 <center><video id="Video" width='852' height='480' controls autoplay></video></center>
 <script>
 function Crab() {
-  var checkBox = document.getElementById("vid1");
+  var checkBox = document.getElementById("Crab");
   var text = document.getElementById("CR");
   if (checkBox.checked == true){
     text.style.display = "inline-block";
@@ -47,7 +47,7 @@ function Crab() {
 }
 
 function Sans() {
-  var checkBox = document.getElementById("vid2");
+  var checkBox = document.getElementById("Sans");
   var text = document.getElementById("SR");
   if (checkBox.checked == true){
     text.style.display = "inline-block";
@@ -70,7 +70,7 @@ function CreateTimer() {
   for (var i = 0, length = radios.length; i < length; i++) {
       if (radios[i].checked) {
           // do whatever you want with the checked radio
-          var url = (radios[i].class);
+          var url = (radios[i].id);
           // only one radio can be logically checked, don't check the rest
          break;
       }
