@@ -36,7 +36,7 @@ p {
 <center><video id="Video" width='852' height='480' controls autoplay></video></center>
 <script>
 function Crab() {
-  var checkBox = document.getElementById("Crab");
+  var checkBox = document.getElementById("CrabRave");
   var text = document.getElementById("CR");
   if (checkBox.checked == true){
     text.style.display = "inline-block";
@@ -47,7 +47,7 @@ function Crab() {
 }
 
 function Sans() {
-  var checkBox = document.getElementById("Sans");
+  var checkBox = document.getElementById("SansRave");
   var text = document.getElementById("SR");
   if (checkBox.checked == true){
     text.style.display = "inline-block";
@@ -103,7 +103,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("Video").style.display = "block";
-    document.getElementById("Video").innerHTML = "<source src='"+url+"Rave.mp4' type='video/mp4'>Your browser does not support the video tag. :(";
+    document.getElementById("Video").innerHTML = "<source src='"+url+".mp4' type='video/mp4'>Your browser does not support the video tag. :(";
   }
 }, 1000);
 
