@@ -29,7 +29,7 @@ p {
 
   A few notes:
   <br />*Thanks to Monstercat, Noisestorm, Toby Fox, Fluxxy, and Dat Boi DXY for the music and the video.
-  <br />*Make a timer at least <span id="CR" style="display:inline-block">44</span><span id="SR" style="display:none">75</span> seconds ahead of the current time, since it is <span id="CR" style="display:inline-block">44</span><span id="SR" style="display:none">75</span> seconds until the beat drops.
+  <br />*Make a timer at least <span id="CR" style="display:inline-block">44</span><span id="SR" style="display:none">75</span> seconds ahead of the current time, since that is how long it is until the beat drops.
   <br />*The time on the website may not match the clock on your computer since most likely they did not reference the same time sever at the same time.</span></center>
 
 <p id="Timer"></p>
@@ -70,7 +70,7 @@ function CreateTimer() {
   for (var i = 0, length = radios.length; i < length; i++) {
       if (radios[i].checked) {
           // do whatever you want with the checked radio
-          var url = (radios[i].id);
+          var url = (radios[i].class);
           // only one radio can be logically checked, don't check the rest
          break;
       }
