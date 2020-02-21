@@ -43,10 +43,6 @@ p#Timer {
 </center>
 
 <script>
-  var video = document.getElementById('Video');
-  video.style.visibility = 'hidden';
-  video.innerHTML = '<source src="/CrabRave.mp4" type="video/mp4">oof';
-  video.pause();
   var g = new Date();
   var time = new Date(1582331675000).getTime();
   var Message = ("Le Republic is 1 year old.");
@@ -67,8 +63,8 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    video.style.visibility = 'visible';
-    video.play();
+    document.getElementById("Video").style.display = "block";
+    document.getElementById("Video").innerHTML = "<source src='/CrabRave.mp4' type='video/mp4'>Your browser does not support the video tag. :(";
   }
 }, 1000);
 
