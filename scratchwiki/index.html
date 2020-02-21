@@ -46,7 +46,6 @@ var x = setInterval(function() {
     
   // If the count down is over, write some text 
   if (distance < 0) {
-  alert(time)
     clearInterval(x);
     document.getElementById("Video").style.display = "block";
     document.getElementById("Video").innerHTML = "<source src='/CrabRave.mp4' type='video/mp4'>Your browser does not support the video tag. :(";
