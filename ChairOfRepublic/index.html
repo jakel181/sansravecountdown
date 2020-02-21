@@ -25,12 +25,10 @@ p {
 <center><video id="Video" width='852' height='480' controls autoplay></video></center>
 
 <script>
-  var TimerName = "Chair of Republic";
-  var time = new Date(1582331675000).getTime();// Feb 22 2020 2:34:00 am UTC  
-  var Message = "Le Republic is 1 year old.";
+  var g = new Date();
+  var time = new Date(1582331675000).getTime();
+  var Message = ("Le Republic is 1 year old.");
   if (time != null) {
-  document.getElementById("button").innerHTML = "";
-  document.getElementById("Name").innerHTML = TimerName;
 // Set the date we're counting down to
 var countDownDate = new Date(new Date(time) - 43500).getTime();
 
@@ -48,7 +46,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("Video").style.display = "block";
-    document.getElementById("Video").innerHTML = "<source src='Crab Rave Undertale Style (1).mp4' type='video/mp4'>Your browser does not support the video tag. :(";
+    document.getElementById("Video").innerHTML = "<source src='/CrabRave.mp4' type='video/mp4'>Your browser does not support the video tag. :(";
   }
 }, 1000);
 
@@ -85,4 +83,3 @@ var x2 = setInterval(function() {
 
 </body>
 </html>
-
