@@ -64,10 +64,9 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("Video").style.display = "block";
-    document.getElementById("Video").innerHTML = "<source src='/NaNaNaNa.mp4' type='video/mp4'>Your browser does not support the video tag. :(";
+    document.getElementById("Video").innerHTML = "<source src='"+url+".mp4' type='video/mp4'>Your browser does not support the video tag. :(";
   }
 }, 1000);
-
 // Set the date we're counting down to
 var countDownDate2 = new Date(time).getTime();
 
