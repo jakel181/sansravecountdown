@@ -33,6 +33,7 @@ p {
 <form>
 <input type="radio" name="num" id="SansRave" value="43600" onclick="Sans()" checked>Sans Rave<br>
 <input type="radio" name="num" id="CrabRave" value="75000" onclick="Crab()">Crab Rave<br>
+<input type="radio" name="num" id="NaNaNaNa" value="8000" onclick="Na()">Na Na Na Na Hey Hey Hey Goodbye<br>
 </form>
   <br />
   <button onclick="CreateTimer()">Create a countdown</button> 
@@ -40,7 +41,7 @@ p {
   <br />
   A few notes:
   <br />*Thanks to Monstercat, Noisestorm, Toby Fox, Fluxxy, and Dat Boi DXY for the music and the video.
-  <br />*Make a timer at least <b><span id="SR" style="display:inline-block">44</span><span id="CR" style="display:none">75</span></b> seconds ahead of the current time, since that is how long it is until the beat drops.
+  <br />*Make a timer at least <b><span id="SR" style="display:inline-block">44</span><span id="NA" style="display:inline-block">8</span><span id="CR" style="display:none">75</span></b> seconds ahead of the current time, since that is how long it is until the beat drops.
   <br />*The time on the website may not match the clock on your computer since most likely they did not reference the same time sever at the same time.</span></center>
 
 <p id="Timer"></p>
@@ -52,6 +53,7 @@ function Crab() {
   if (checkBox.checked == true){
     text.style.display = "inline-block";
     document.getElementById("SR").style.display = "none";
+    document.getElementById("NA").style.display = "none";
   } else {
      text.style.display = "none";
   }
@@ -63,11 +65,23 @@ function Sans() {
   if (checkBox.checked == true){
     text.style.display = "inline-block";
     document.getElementById("CR").style.display = "none";
+    document.getElementById("NA").style.display = "none";
   } else {
      text.style.display = "none";
   }
 }
   
+ function Na() {
+  var checkBox = document.getElementById("Na");
+  var text = document.getElementById("NA");
+  if (checkBox.checked == true){
+    text.style.display = "inline-block";
+    document.getElementById("SR").style.display = "none";
+    document.getElementById("CR").style.display = "none";
+  } else {
+     text.style.display = "none";
+  }
+}
 function CreateTimer() {
   var radios = document.getElementsByName('num');
   for (var i = 0, length = radios.length; i < length; i++) {
