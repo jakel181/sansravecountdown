@@ -19,9 +19,6 @@ p {
   font-size: 60px;
   margin-top: 0px;
 }
-body {
-  background-image: url("chair.jpg");
-}
   #Video {	
   display: none;
 }
@@ -39,7 +36,7 @@ p#Timer {
 <h1 id="Name">Flash</h1>
 <br />
 <p id="Timer"></p>
-<video id="Video" width='852' height='480' controls autoplay></video>
+<video id="Video" width='480' height='480' controls autoplay></video>
 </center>
 
 <script>
@@ -64,7 +61,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("Video").style.display = "block";
-    document.getElementById("Video").innerHTML = "<source src='"+url+".mp4' type='video/mp4'>Your browser does not support the video tag. :(";
+    document.getElementById("Video").innerHTML = "<source src='/NaNaNaNa.mp4' type='video/mp4'>Your browser does not support the video tag. :(";
   }
 }, 1000);
 // Set the date we're counting down to
