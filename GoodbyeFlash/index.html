@@ -1,8 +1,17 @@
-
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title id="Name"></title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144952244-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144952244-4');
+</script>
+
+  <title id="Name">Goodbye Flash</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 p {
@@ -10,26 +19,33 @@ p {
   font-size: 60px;
   margin-top: 0px;
 }
+body {
+  background-image: url("chair.jpg");
+}
 #Video {	
   display: none;
+}
+p#Timer {
+  background-color: white;
+  border: 5px solid black;
+  width: 650px;
+  padding: 50px;
+  margin: 20px;
 }
 </style>
 </head>
 <body>
-<center><h1 id="Name">Flash Memorial</h1></center>
+<center>
+<h1 id="Name">Flash</h1>
 <br />
-
-
-
-
 <p id="Timer"></p>
-<center><video id="Video" width='852' height='480' controls autoplay></video></center>
+<video id="Video" width='852' height='480' controls autoplay></video>
+</center>
 
 <script>
-
   var g = new Date();
-  var time = new Date(new Date().getTime() + 60000);
-  var Message = ("Goodbye old friend");
+  var time = new Date(new Date().getTime() + 91000)
+  var Message = ("Goodbye Old Friend");
   if (time != null) {
 // Set the date we're counting down to
 var countDownDate = new Date(new Date(time) - 8800).getTime();
@@ -46,7 +62,6 @@ var x = setInterval(function() {
     
   // If the count down is over, write some text 
   if (distance < 0) {
-  alert(time)
     clearInterval(x);
     document.getElementById("Video").style.display = "block";
     document.getElementById("Video").innerHTML = "<source src='/NaNaNaNa.mp4' type='video/mp4'>Your browser does not support the video tag. :(";
